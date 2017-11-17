@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 611px;
+        }
+        #left{
+            width: 40%;
+            height: 100%;
+            float: left;
+            background: #000;
+            position: fixed;
+            color: #FFFFFF;
+        }
+        .leftTop{
+            background: #FFFFFF;
+            width: 100%;
+            height: 15%;
+            position: absolute;
+            top:0;
+
+        }
+        .msg{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+
+        }
+        #right{
+            width: 60%;
+            float: right;
+            background: greenyellow;
+        }
+        #right div{
+            height: 800px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+        <div id="left">
+            <div class="leftTop"></div>
+            <div class="msg"><h1 v-html="msg"></h1></div>
+        </div>
+        <div id="right">
+            <div class="aboutMe" style="background: #f000f0;"></div>
+            <div class="myResume"style="background: #fff000;"></div>
+            <div class="myReservices"style="background: #fff0f0;"></div>
+            <div class="mySkills"style="background: #ff0ff0;"></div>
+        </div>
+</body>
+<script src="vue.js"></script>
+<script>
+        var vm = new Vue({
+            el:"#left",
+            data:{
+                msg: "about me",
+                scroll: ''
+
+
+            },
+            methods: {
+                menu:function () {
+                    this.scroll = document.body.scrollTop;
+                    if(this.scroll<800){
+                        this.msg = "about me"
+                    }
+                    else if (this.scroll>800 && this.scroll<1600){
+                        this.msg = `My<br/>
+
+                        Resume`
+                    }else if (this.scroll>1600 && this.scroll<2400){
+                        this.msg = `My<br/> Reservices`
+                    }else if (this.scroll>2400 && this.scroll<3200){
+                        this.msg = `My<br/> Skills`
+                    }
+                    console.log(this.scroll)
+                },
+                mounted:function () {
+                    window.addEventListener('scroll', this.menu)
+                }
+            }
+        })
+    vm.menu()
+    vm.mounted()
+
+
+
+</script>
+</html>
