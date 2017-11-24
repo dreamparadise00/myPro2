@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 body{
 	background-color: #f9f9f9;
 	font-family: "Crimson Text";
@@ -229,6 +233,9 @@ footer{
 	padding-right: 40px;
 
 	}
+.subtitle li{
+	list-style: none;
+}
 .page-title:after{
 	width: 75%;
 	top: -9px;
@@ -240,7 +247,7 @@ footer{
 	bottom: -7px;
 }
 
-#watermark .marker{
+.watermark .marker{
 	position: absolute;
 	font-size: 60px;
 	opacity: 0.1;
@@ -250,7 +257,7 @@ footer{
 	top: -5px;
 }
 
-#watermark{
+.watermark{
 	position: relative;
 }
 
