@@ -6,7 +6,6 @@ body{
 .main{
 	background: #fff;
 }
-
 .home-description{
 	font-style: italic;
 	font-weight: 600;
@@ -45,6 +44,7 @@ body{
 
 		.img-home{
 			height: 90%;
+
 		}
 
 		.btn-group-vertical{
@@ -65,10 +65,12 @@ body{
 			
 		}
 }
-.img-rabbit{
-	width: 100%;
-}
-.btn-rabbit{
+		.img-home{
+			width: 100%;
+			padding: 5%;
+		}
+
+.btn-pro{
 	background-color: #fff;
 	color: #111;
 	font-style: italic;
@@ -80,7 +82,7 @@ body{
 	font-size: 13px;
 	}
 
-.btn-rabbit:hover{
+.btn-pro:hover{
 	color: #fff;
 	background-color: #bb9e7d;
 	border-color: #bb9e7d;}
@@ -126,7 +128,7 @@ footer{
     text-align: center;
     display: block;
     clear: both;
-    margin-top: 70px;	 
+
 }
 
 .back i{
