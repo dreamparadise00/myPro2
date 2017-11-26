@@ -3,21 +3,40 @@
 	padding: 0;
 }
 body{
+	height: 100%;
+	width: 100%;
 	background-color: #f9f9f9;
 	font-family: "Crimson Text";
+	background: url("../images/pic.jpg") no-repeat;
+	-webkit-background-size:cover;
+	background-size:cover;
+	overflow: hidden;
+	opacity: 0.98;
 }
 
 .main{
-	background: #fff;
+	height: 100%;
+	/*background-color: rgba(255,255,255,0.1);
+	;*/
+	/*background: url("../images/pic.jpg") no-repeat;
+	-webkit-background-size:cover;
+	background-size:cover;*/
 }
+/*.logo,.home-description,.slideinright,.social{
+	opacity: 1;
+}*/
 .home-description{
 	font-style: italic;
 	font-weight: 600;
 	font-family: "Crimson";
-	font-size: 19px;
+	font-size: 20px;
     padding-top: 15px;
     padding-bottom: 25px;
     line-height: 29px;
+	color: #ffffff;
+	text-shadow: #000000 2px 4px 2px;
+	margin-bottom: 8%;
+	margin-top:12%;
 
 }
 
@@ -71,7 +90,12 @@ body{
 }
 		.img-home{
 			width: 100%;
-			padding: 5%;
+			height: 600px;
+			/*background: url("../images/pic.jpg") no-repeat;
+			-webkit-background-size:cover;
+			background-size:cover;
+			opacity: 0.6;*/
+
 		}
 
 .btn-pro{
@@ -104,8 +128,9 @@ p{
 
 /*Home Style*/
 .logo{
-	padding-top: 10%;
+	padding-top: 3%;
 	font-size: 12px;
+
 }
 .logo img{
     width: 250px;
@@ -320,7 +345,7 @@ footer{
 }
 @media (max-width: 1024px) and (orientation: landscape){
 	.main{
-		height: auto;
+		height: 100%;
 	}
 }
 .custom_btn{
