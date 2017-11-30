@@ -5,8 +5,6 @@ $( document ).ready(function() {
                 $("#contact_scroll").fadeOut();
 
                 $("#about").click(function(){
-                    var  that = $(this);
-                    console.log(that)
                     $("#index").fadeOut();
                     $("#about_scroll").fadeIn();
                     $('#about_left').addClass('animated slideInLeft');
@@ -31,8 +29,5 @@ $( document ).ready(function() {
                     $('#index_left').addClass('animated slideInLeft');
                     $('#index_right').addClass('animated slideInRight');
                     });
-                function methods() {
-
-                }
            
 		});
