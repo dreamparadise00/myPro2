@@ -22,7 +22,6 @@
                 background: #ff0000;
                 margin: 0 auto;
                 position: absolute;
-                z-index: 1;
                 float: left;
             }
             #tabs{
@@ -62,7 +61,7 @@
     </head>
 
     <body>
-    <div id="bgImg" style="z-index: 1">
+    <div id="bgImg" style="z-index: -1">
         <ul id="tabs">
             <li class="selected">&nbsp;</li>
             <li>&nbsp;</li>
@@ -118,7 +117,7 @@
         </div>
 
         <div id="about_scroll" class="pages ">
-            <div class="container main">
+            <div class="container main" style="z-index: 10">
                 <div class="row">
                     <div class="col-md-6 left" id="about_left">
                         <img class="img-responsive img-pro" src="images/about.jpg">
@@ -204,7 +203,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
     <script>
-        var oContainer = document.getElementById('bgImg');
+        var oBgImg = document.getElementById('bgImg');
         var oTabs = document.getElementById('tabs');
         var oImgs = document.getElementById('imgs');
         var aLi = oTabs.children;
