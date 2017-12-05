@@ -6,33 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>王浩丞</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
+
     <style>
-        .borderBar{
-
-            height: 100px;
-            background: #000000;
+        .bgImg {
+            width: 100%;
+            height: 100%;
+            background:url("img/1.jpeg") no-repeat;
+            -webkit-background-size:cover;
+            background-size:cover;
         }
-        .main{
 
-            height: 100px;
+        .left {
+
+            height: 638px;
             background: red;
+        }
+
+        .right {
+            height: 638px;
+            background: #000;
+        }
+        .logoTest{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top:30%;
         }
     </style>
 </head>
 <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 " >
-                    <div class="borderBar"></div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="main"></div>
-                </div>
-                <div class="col-sm-3 " >
-                    <div class="borderBar"></div>
+    <div class=".container-fluid">
+        <div class="row">
+            <div class="col-sm-12 left ">
+                <div class="bgImg">
+                    <div class="container">
+                        <div class="col-sm-6 left ">
+                            <div class="logoTest text-center">
+                                <h1>HI 我是王浩丞</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 left">
+                <p>1</p>
+            </div>
+            <div class="col-sm-6 right">
+                <p>1</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 left">
+                <p>2</p>
+            </div>
+            <div class="col-sm-6 right">
+                <p>2</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 left">
+                <p>3</p>
+            </div>
+            <div class="col-sm-6 right">
+                <p>3</p>
+            </div>
+        </div>
+    </div>
+
 </body>
+<script src="js/bootstrap.js"></script>
 </html>
