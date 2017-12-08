@@ -1,3 +1,4 @@
+
 .bgImg {
     width: 100%;
     height: 100%;
@@ -98,3 +99,203 @@
     text-align: center;
 }
 /*portfolio*/
+/*tabs*/
+.tabs {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tabs nav {
+    text-align: center;
+}
+
+.tabs nav ul {
+    position: relative;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    list-style: none;
+    -ms-box-orient: horizontal;        /* 水平排列 div 元素的子元素：*/
+    -ms-box-pack: center;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;   /*让弹性盒的元素以相反的顺序显示*/
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;          /*  在弹性盒对象的 <div> 元素中的各项周围留有空白：*/
+}
+
+.tabs nav ul li {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0;
+    text-align: center;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.tabs nav a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 3;
+}
+
+.tabs nav a span {
+    vertical-align: middle;
+    font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+    color: #74777b;
+}
+
+.tabs nav a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.portfolio h4 {
+    margin: 30px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+/*profolio img*/
+.link-top {
+    padding: 0;
+}
+
+.link-work figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.link-work figure.project-img:hover {
+    background-color: #000;
+}
+
+.link-work figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 3px solid #fff;
+}
+
+.link-bottom {
+    margin: 2.5em 0;
+}
+
+.link-work figure figcaption {
+    padding: 2em;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.link-work figure figcaption::before, .link-work figure figcaption::after {
+    pointer-events: none;
+}
+
+.link-work figure figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figure.project-img:hover img {
+    opacity: 0.3;
+}
+
+figure.project-img figcaption::before, figure.project-img figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s,-webkit-transform 0.35s;
+    -moz-transition: opacity 0.35s, -moz-transform 0.35s;
+    -o-transition: opacity 0.35s, -o-transform 0.35s;
+    -ms-transition: opacity 0.35s, -ms-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.project-img figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    -moz-transform: scale(0,1);
+    -o-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+figure.project-img figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    -moz-transform: scale(1,0);
+    -o-transform: scale(1,0);
+    -ms-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+figure.project-img h4 {
+    padding-top: 11%;
+    -webkit-transition: transform 0.35s;
+    -moz-transition: transform 0.35s;
+    -o-transition: -o-transform 0.35s;
+    -ms-transition: -ms-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    -moz-transform: translate3d(0,-20px,0);
+    -o-transform: translate3d(0,-20px,0);
+    -ms-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+    opacity:0;
+}
+
+.link-top figure.project-img h4{
+    padding-top: 16%;
+}
+
+figure.project-img:hover figcaption::before, figure.project-img:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.project-img:hover h4 {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
