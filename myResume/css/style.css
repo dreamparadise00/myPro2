@@ -303,3 +303,66 @@ figure.project-img:hover h4 {
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+/*map*/
+/*
+.map-table{
+
+}*/
+.map-right {
+    margin-top: 2em;
+}
+.map-right-title {
+    width: 50%;
+    float: left;
+}
+span.glyphicon {
+    color: #FFF;
+    background: #11b563;
+    border: 1px solid #11b563;
+    padding: 18px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    font-size: 18px;
+    -webkit-transition:.5s all;
+    -moz-transition:.5s all;
+    transition:.5s all;
+    -o-transition: all .5s ;
+    -ms-transition: all .5s all;
+}
+span.glyphicon:hover {
+    background: #fff;
+    color: #11b563;
+    border: 1px solid #11b563;
+}
+.map-right-title {
+    margin-bottom: 3em;
+}
+.map-right-title:nth-child(4), .map-right-title:nth-child(5) {
+    margin-bottom: 0em;
+}
+.map-right-title h4 {
+    color: #484848;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin: 15px 0;
+}
+.map-right-title p {
+    color: #4c4c4c;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 28px;
+}
+.map-right-title a {
+    color: #313131;
+    text-decoration:none;
+}
+.map-right-title a:hover{
+    color: #ff4f81;
+}
+ul{
+    list-style: none;
+}
