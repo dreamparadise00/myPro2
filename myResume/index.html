@@ -9,100 +9,30 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .bg {
-          /*  width: 100%;
-            height: 100px;*/
-            padding: 100px 0;
-            text-align: center;
-            color: #fff;
-            background: #000;
-            display: flex;
-            height: 80px;
-            opacity: 0.6;
-        }
-        .my-navlogo{
-            position: absolute;
-            left:10%;
-            font-size: 24px;
-        }
-        .my-navli{
-            position: absolute;
-            right: 10%;
-        }
-        .my-navli li{
-            margin-left: 40px;
-            font-size: 20px;
-        }
 
-        .my-navbar {
-            padding: 20px 0;
-            transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-        }
-
-        .my-navbar a {
-            background: transparent !important;
-            color: #fff !important
-        }
-
-        .my-navbar a:hover {
-            color: #45bcf9 !important;
-            background: transparent;
-            outline: 0
-        }
-        .my-navbar a {
-            -webkit-transition: color 0.5s ease-in-out;
-            -moz-transition: color 0.5s ease-in-out;
-            -ms-transition: color 0.5s ease-in-out;
-            -o-transition: color 0.5s ease-in-out;
-            transition: color 0.5s ease-in-out;
-        }
-
-        button.navbar-toggle {
-            background-color: #fbfbfb;
-        }
-
-        button.navbar-toggle > span.icon-bar {
-            background-color: #dedede
-        }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-fixed-top my-navbar bg" role="navigation">
+<nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand my-navlogo" href="#">wanghaocheng</a>
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="...">
+            </a>
         </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav my-navli" >
-                <li class="active">
-                    <a href="#about">about</a>
-                </li>
-                <li>
-                    <a href="#skills">skills</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#map">map</a>
-                </li>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">about me</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#map">map</a></li>
             </ul>
-        </div>
-    </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
-<!--<script>
-    $(window).scroll(function () {
-        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
-        }else {$(".navbar-fixed-top").removeClass("top-nav");}
-    })
-</script>-->
+
 <div class=".container-fluid">
     <div class="row">
         <div class="col-sm-12 left ">
@@ -459,29 +389,29 @@
             </html>
         </div>
         <div class="col-md-6 map-right">
-                <div data-aos="flip-down" class="col-md-6 map-right-title">
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                    <h4>Location</h4>
-                    <p>黑龙江大学 数据科学与技术学院</p>
-                </div>
-                <div data-aos="flip-down" class="col-md-6 map-right-title">
-                    <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-                    <h4>Phone</h4>
-                    <p>18845117146</p>
-
-                </div>
-                <div data-aos="flip-up" class="col-md-6 map-right-title">
-                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                    <h4>website</h4>
-                    <p><a href="http://www.wanghaocheng0427.cn" target="_blank">www.wanghaocheng0427.cn</a></p>
-                </div>
-                <div data-aos="flip-up" class="col-md-6 map-right-title">
-                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                    <h4>Mail</h4>
-                    <p><a href="#">3110593207@qq.com</a></p>
-                </div>
+            <div data-aos="flip-down" class="col-md-6 map-right-title">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                <h4>Location</h4>
+                <p>黑龙江大学 数据科学与技术学院</p>
+            </div>
+            <div data-aos="flip-down" class="col-md-6 map-right-title">
+                <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                <h4>Phone</h4>
+                <p>18845117146</p>
 
             </div>
+            <div data-aos="flip-up" class="col-md-6 map-right-title">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <h4>website</h4>
+                <p><a href="http://www.wanghaocheng0427.cn" target="_blank">www.wanghaocheng0427.cn</a></p>
+            </div>
+            <div data-aos="flip-up" class="col-md-6 map-right-title">
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <h4>Mail</h4>
+                <p><a href="#">3110593207@qq.com</a></p>
+            </div>
+
+        </div>
     </div>
 </div>
 
