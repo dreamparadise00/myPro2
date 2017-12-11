@@ -1,4 +1,39 @@
+.mynavbar li{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.navbar a{
+    color:#ffffff;
+}
+.navbar .nav > li > a{
+    color: #ffffff;
+}
+.navbar .nav > li > a:hover {
+    color: #000;
+    background-color: #ffffff;
+}
+.navbar .nav >li >a:active{
+    color: #000;
+    background-color: #282828;
+}
+.navbar .nav >li >a:visited{
+    color: #ffffff;
+}
 
+
+.navbar-nav>.active>a:hover{
+    color:#000;
+    background-color:#282828
+}
+
+.navbar-right{
+    margin-right: 5px;
+}
+.mynavbar>li >a:hover {
+    color: #000;
+    background-color: #ffffff;
+}
+/*nav*/
 .bgImg {
     width: 100%;
     height: 100%;
