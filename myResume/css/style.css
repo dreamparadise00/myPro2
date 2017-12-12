@@ -1,6 +1,6 @@
 .mynavbar li{
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 24px;
 }
 .navbar a{
     color:#ffffff;
@@ -135,6 +135,10 @@
     height: 100%;
     padding: 24% 10%;
     text-align: center;
+    opacity: 0.6;
+}
+.skill-agile .agile-caption h3,.skill-agile .agile-caption p{
+    display: none;
 }
 /*portfolio*/
 /*tabs*/

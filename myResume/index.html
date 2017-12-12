@@ -8,8 +8,28 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pie.css">
     <style>
+        .navbar-brand img{
+            height: 100%;
+        }
 
+
+        .pie-wrap{
+            width: 140px;
+            height: 160px;
+            margin:0 40px 40px;
+            position:relative;
+            float: left;
+
+        }
+        .pie-wrap p{
+            position: absolute;
+            top: 160px;
+            width:140px;
+            text-align: center;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -112,6 +132,36 @@
             </div>
         </div>
         <div class="col-md-6 ">
+
+                <div id="init-pie">
+                    <div class="pie-wrap ">
+                        <div class="pie" id="ring-pie1" data-value="0.4"></div>
+                        <p>动画+数字</p>
+                    </div>
+
+                    <div class="pie-wrap ">
+                        <div class="pie" id="ring-pie2" data-value="0.4"></div>
+                        <p>动画+数字</p>
+                    </div>
+
+
+                    <div class="pie-wrap ">
+                        <div class="pie" id="ring-pie3" data-value="0.4"></div>
+                        <p>动画+数字</p>
+                    </div>
+
+
+                    <div class="pie-wrap ">
+                        <div class="pie" id="ring-pie4" data-value="0.4"></div>
+                        <p>动画+数字</p>
+                    </div>
+
+
+
+
+
+                </div>
+
         </div>
     </div>
 </div>
@@ -424,12 +474,61 @@
 <script src="js/jquery-1.12.4.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/aos.js"></script>
+<script src="js/pie-1.0.1.js"></script>
 <script>
+    $(function () {
+      /*  $(".skill-agile").mouseover(function (e) {
+
+           var classname = " ";
+           var thisname = e.target.className;
+           if(thisname == agile-caption || thisname == skill-agile){
+                classname = thisname;
+           }else {
+                classname = agile-caption;
+           }
+             $("."+ thisname ).css("left","0");
+             $("."+ thisname ).css("background-color","#000");
+             $("."+ thisname +" h3").css("color","#ffffff");
+             $("."+ thisname +" h3").css("display","block");
+             $("."+ thisname +" p").css("display","block");
+        })*/
++
+    });
+
+
     AOS.init({
         offset: 200,
         duration: 600,
         easing: 'ease-in-sine',
         delay: 100,
     });
+
+
+
+    var pie1 = new Pie({
+        el : '#ring-pie1',
+        animite : true,
+        ring : 0.5
+    });
+    pie1.init();
+    var pie2 = new Pie({
+        el : '#ring-pie2',
+        animite : true,
+        ring : 0.5
+    });
+    pie2.init();
+    var pie3 = new Pie({
+        el : '#ring-pie3',
+        animite : true,
+        ring : 0.5
+    });
+    pie3.init();
+    var pie4 = new Pie({
+        el : '#ring-pie4',
+        animite : true,
+        ring : 0.5
+    });
+    pie4.init();
+
 </script>
 </html>
