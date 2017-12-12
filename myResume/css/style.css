@@ -77,10 +77,10 @@
     line-height: 28px;
     letter-spacing: .5px;
     font-size: 14px;
-    margin: 1em 0;
+    margin: 16px 0;
 }
 .about-left {
-    padding: 0 0 0 5em;
+    padding: 0 0 0 90px;
 }
 .about-left h3 {
     text-align: left;
@@ -92,7 +92,7 @@
 
     width: 22%;
     color: #146eb4;
-    margin-left: 0.3em;
+    margin-left: 5px;
     font-weight: 700;
     text-align: center;
 }
@@ -107,6 +107,12 @@
     width: 100%;
 }
 /*skill*/
+.skill-agile {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 32px;
+    margin-top: 16px;
+}
 .skill-left {
     padding: 0;
 }
@@ -137,8 +143,60 @@
     text-align: center;
     opacity: 0.6;
 }
-.skill-agile .agile-caption h3,.skill-agile .agile-caption p{
-    display: none;
+.skill-agile .agile-caption h3,.skill-agile .agile-caption p {
+    position: relative;
+    left:-380px;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.skill-agile .agile-caption h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 auto 8px;
+    font-weight: 300;
+    color: #fff;
+}
+.skill-agile .agile-caption p {
+    line-height: 32px;
+    color: #d5d3d3;
+    font-weight: 300;
+}
+.skill-agile .agile-caption h3 {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+
+.skill-agile .agile-caption p {
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    transition-delay: 500ms;
+}
+.skill-agile:hover .agile-caption {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
+    left:0;
+}
+
+.skill-agile:hover img{
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.skill-agile:hover .agile-caption h3,.skill-agile:hover .agile-caption p {
+    -moz-transform: translateX(380px);
+    -o-transform: translateX(380px);
+    -webkit-transform: translateX(380px);
+    transform: translateX(380px);
 }
 /*portfolio*/
 /*tabs*/
@@ -199,7 +257,7 @@
 
 .tabs nav a span {
     vertical-align: middle;
-    font-size: 0.75em;
+    font-size: 12px;
 }
 
 .tabs nav li.tab-current a {
@@ -242,11 +300,11 @@
 }
 
 .link-bottom {
-    margin: 2.5em 0;
+    margin: 30px 0;
 }
 
 .link-work figure figcaption {
-    padding: 2em;
+    padding: 32px;
     color: #fff;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -348,7 +406,7 @@ figure.project-img:hover h4 {
 
 }*/
 .map-right {
-    margin-top: 2em;
+    margin-top: 32px;
 }
 .map-right-title {
     width: 50%;
@@ -378,10 +436,10 @@ span.glyphicon:hover {
     border: 1px solid #11b563;
 }
 .map-right-title {
-    margin-bottom: 3em;
+    margin-bottom: 48px;
 }
 .map-right-title:nth-child(4), .map-right-title:nth-child(5) {
-    margin-bottom: 0em;
+    margin-bottom: 0;
 }
 .map-right-title h4 {
     color: #484848;
