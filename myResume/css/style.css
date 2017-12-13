@@ -37,7 +37,7 @@
 .bgImg {
     width: 100%;
     height: 100%;
-    background:url("../img/1.jpeg") no-repeat;
+   /* background:url("../img/MyImg.jpg") no-repeat;*/
     -webkit-background-size:cover;
     background-size:cover;
 }
@@ -135,7 +135,7 @@
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    left:-100%;         /*js将其变为0，形成动画效果*/
+    left:-100%;
     top:0;
     width: 100%;
     height: 100%;

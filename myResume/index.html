@@ -30,6 +30,51 @@
             text-align: center;
             font-size: 20px;
         }
+
+        img{
+            border: 0;
+        }
+        #cf_container{
+            width: 80%;
+            height: 90%;
+            position: relative;
+            margin: 0 auto;
+        }
+        #imgs img{
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+        #imgs .selected{
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        #nav{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #nav li, #arrows span{
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            float: left;
+            margin-right: 5px;
+        }
+        #nav .selected{
+            background: orange;
+        }
+        #arrows{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -56,15 +101,31 @@
 <div class=".container-fluid">
     <div class="row">
         <div class="col-sm-12 left ">
-            <div class="bgImg">
-                <div class="container">
-                    <div class="col-sm-6 left ">
+
+                    <!--<div class="col-sm-6 left ">
                         <div class="logoTest text-center">
-                            <h1>HI 我是王浩丞</h1>
+
                         </div>
+                    </div>-->
+                    <div id="cf_container">
+                    <div id="imgs">
+                        <img src="img/c.jpg" alt="" class="selected">
+                        <img src="img/x.jpg" alt="">
+                        <img src="img/q.jpg" alt="">
+                        <img src="img/d.jpg" alt="">
                     </div>
-                </div>
-            </div>
+                    <ul id="nav">
+                        <li class="selected">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <div id="arrows">
+                        <span id="prev">&lt;</span>
+                        <span id="next">&gt;</span>
+                    </div>
+                    </div>
+
         </div>
     </div>
 </div>
@@ -73,20 +134,15 @@
         <h3 data-aos="zoom-in">About me</h3>
         <div class="col-md-6 about-left">
             <h3 data-aos="slide-up">Hello</h3>
-            <p>Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-                nisi ut aliquid ex ea commodi consequatur? Quis autem exercitationem ullam corporis suscipit laboriosam,
-                vel eum iure reprehenderit qui in ea voluptate velit
-                esse quam nihil molestiae consequatur, vel illum qui
-                dolorem eum fugiat quo voluptas nulla pariatur.</p>
-            <p>Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam,
-                nisi ut aliquid ex ea commodi consequatur? Quis autem
-                vel eum iure reprehenderit.</p>
-            <img src="img/signature.jpg" alt=""/>
+            <p>
+                姓名：王浩丞
+            </p>
+            <p>
+                年龄：21
+            </p>
         </div>
         <div class="col-md-6 about-right">
-            <img src="img/about.jpg" alt=""/>
+            <img src="img/MyImg.jpg" alt="">
         </div>
     </div>
 </div>
@@ -135,24 +191,24 @@
 
                 <div id="init-pie">
                     <div class="col-md-6">
-                    <div class="pie-wrap ">
+                    <div class="pie-wrap "data-aos="flip-left">
                         <div class="pie" id="ring-pie1" data-value="0.8"></div>
-                        <p>html</p>
+                        <p>html5</p>
                     </div>
 
-                    <div class="pie-wrap ">
+                    <div class="pie-wrap " data-aos="flip-right" >
                         <div class="pie" id="ring-pie2" data-value="0.8"></div>
-                        <p>css</p>
+                        <p>JQuery</p>
                     </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="flip-left">
                         <div class="pie-wrap ">
                             <div class="pie" id="ring-pie3" data-value="0.6"></div>
                             <p>php</p>
                         </div>
 
 
-                        <div class="pie-wrap ">
+                        <div class="pie-wrap " data-aos="flip-right" >
                             <div class="pie" id="ring-pie4" data-value="0.6"></div>
                             <p>javascript</p>
                         </div>
@@ -517,5 +573,49 @@
     });
     pie4.init();
 
+
+
+    $(function(){
+        var nowIndex = 0;//当前显示的下标
+        var timer;
+        var $lis = $("#nav li");
+        $lis.on("mouseover", function(){
+            nowIndex = $(this).index();
+            changeImg();
+        });
+
+        $("#prev").on("click", function(){
+            nowIndex--;
+            if(nowIndex == -1){
+                nowIndex = $lis.length - 1;
+            }
+            changeImg();
+        });
+        $("#next").on("click", function(){
+            nowIndex++;
+            if(nowIndex == $lis.length){
+                nowIndex = 0;
+            }
+            changeImg();
+        });
+        play();
+
+        $("#cf_container").hover(function(){
+            clearInterval(timer);
+        }, function(){
+            play();
+        });
+
+        function play(){
+            timer = setInterval(function(){
+                $("#next").trigger("click");
+            }, 3000);
+        }
+        function changeImg(){
+            $lis.eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+            $("#imgs img").eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+        }
+
+    });
 </script>
 </html>
