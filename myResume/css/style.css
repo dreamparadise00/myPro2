@@ -64,7 +64,8 @@
 #about,#skills,#portfolio,#map{
     padding-top: 60px;
 }
-.about {
+
+.about ,.skills,.portfolio,.map{
     border-top: 1px solid;
 }
 .about h3, .skills h3, .portfolio h3 ,.map h3{
@@ -108,6 +109,9 @@
 }
 .about-right img{
     width: 100%;
+}
+.aboutMe li{
+    margin-bottom: 50px;
 }
 /*skill*/
 .skill-agile {
@@ -411,10 +415,10 @@ figure.project-img:hover h4 {
 .map-right {
     margin-top: 32px;
 }
-.map-right-title {
-    width: 50%;
-    float: left;
+.map-right-title{
+
 }
+
 span.glyphicon {
     color: #FFF;
     background: #11b563;
@@ -491,10 +495,10 @@ ul{
 .pie-wrap{
     width: 140px;
     height: 160px;
-    margin:50px 40px 40px;
-    position:relative;
-    float: left;
-
+    margin-top: 15%;
+    margin-bottom: 40%;
+   /* position:relative;*/
+   /* float: left;*/
 }
 .pie-wrap p{
     position: absolute;

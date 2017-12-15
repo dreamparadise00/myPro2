@@ -11,7 +11,7 @@
 	color: #000;
 	font-size: 140%;
 	background-color:#f0f0f0;
-	background-image: linear-gradient(to right, transparent 50%, #87cefa 0);
+	background-image: linear-gradient(to right, transparent 50%, blue 0);
 	cursor:pointer;
 	overflow: hidden;
 }
@@ -49,5 +49,5 @@
 	height:110%;
 	opacity: 0;
 	z-index: -1;
-	background-color: #87cefa;
+	background-color: blue;
 }
