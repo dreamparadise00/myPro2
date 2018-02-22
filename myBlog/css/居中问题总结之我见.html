@@ -57,7 +57,7 @@
       margin-top: -25px;
       margin-left: -25px;
     } */
-    .wrapper{
+    /* .wrapper{
       width: 600px;
       height: 600px;
     }
@@ -80,8 +80,24 @@
       -ms-transform:translate(-50%, -50%);
       -o-transform:translate(-50%, -50%);
       -webkit-transform:translate(-50%, -50%);
-    }
-
+    } */
+    #outer{
+           width: 200px;
+           height: 200px;
+           background: #cccccc;
+           display: table;
+           _position: relative;   // "_"为了兼容IE6
+       }
+       #inner{
+           display: table-cell;
+           vertical-align: middle;
+           _position: absolute;
+           _top: 50%;
+       }
+       #content{
+           _position: relative;
+           _top: -50%;
+       }
   </style>
 </head>
 <body>
@@ -107,12 +123,19 @@
       a
     </div>
   </div> -->
-<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="dw_two">
       <div class="dw_two_child">
         a
       </div>
   </div>
+</div> -->
+<div id="outer">
+    <div id="inner">
+        <div id="content">
+          Paradise_追逐者所写的居中问题总结之我见
+        </div>
+    </div>
 </div>
 
 </body>
