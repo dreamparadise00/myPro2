@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>事件冒泡</title>
+  <style media="screen">
+    #div1{
+      width: 400px;
+      height: 400px;
+      background: red;
+    }
+    #div2{
+      width: 200px;
+      height: 200px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+    <div id="div1">
+      <div id="div2" class="div2">
+
+      </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var oDiv1 = document.getElementById("div1");
+    var oDiv2 = document.getElementById("div2");
+    oDiv1.addEventListener("click",function (){
+      alert("div1被触发");
+    });
+    oDiv2.addEventListener("click",function (){
+      alert("div2被触发");
+    },true);
+</script>
+</html>
