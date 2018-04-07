@@ -14,4 +14,8 @@ for item in nowplaying_movie_list:
         for tag_img_item in item.find_all('img'):
             nowplaying_dict['name'] = tag_img_item['alt']
             nowplaying_list.append(nowplaying_dict)
-print(nowplaying_list)
+# print(nowplaying_list)
+eachCommentList = [];
+for item in comment_div_lits:
+        if item.find_all('p')[0].string is not None:
+            eachCommentList.append(item.find_all('p')[0].string)
