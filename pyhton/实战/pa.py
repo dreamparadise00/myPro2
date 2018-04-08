@@ -20,8 +20,17 @@ resp = request.urlopen(requrl)
 html_data = resp.read().decode('utf-8')
 soup = bs(html_data, 'html.parser')
 comment_div_lits = soup.find_all('div', class_='comment')
-eachCommentList = [];
+eachCommentList = []
 for item in comment_div_lits:
         if item.find_all('p')[0].string is not None:
             eachCommentList.append(item.find_all('p')[0].string)
-print(eachCommentList)
+# print(eachCommentList)
+comments = ''
+for k in range(len(eachCommentList)):
+    comments = comments + (str(eachCommentList[k])).strip()
+# print(comments)
+import re
+# 清理数据中的标点符号
+pattern = re.compile(r'[\u4e00-\u9fa5]+')
+filterdata = re.findall(pattern, comments)
+cleaned_comments = ''.join(filterdata)
