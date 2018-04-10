@@ -50,12 +50,4 @@ words_df=words_df[~words_df.segment.isin(stopwords.stopword)]
 import numpy    #numpy计算包
 words_stat=words_df.groupby(by=['segment'])['segment'].agg({"计数":numpy.size})
 words_stat=words_stat.reset_index().sort_values(by=["计数"],ascending=False)
-# print(words_stat)
-
-
-
-#字典中的key值即为csv中列名
-dataframe = pd.DataFrame(words_stat)
-
-#将DataFrame存储为csv,index表示是否显示行名，default=True
-dataframe.to_csv("test.csv",index=False,sep=',')
+print(words_stat)
